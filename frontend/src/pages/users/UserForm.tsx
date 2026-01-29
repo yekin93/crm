@@ -21,7 +21,8 @@ const UserForm: React.FC = () => {
     if (isEditMode) {
       fetchUser(Number(id));
     }
-  }, [id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id, isEditMode]);
 
   const fetchUser = async (userId: number) => {
     setLoading(true);

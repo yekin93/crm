@@ -17,6 +17,7 @@ const UserDetail: React.FC = () => {
     if (id) {
       fetchUser(Number(id));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const fetchUser = async (userId: number) => {

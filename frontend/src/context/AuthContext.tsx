@@ -7,6 +7,7 @@ import { User } from '../types/user.types';
 import { MESSAGES, ROUTES } from '../utils/constants';
 import { useNavigate } from 'react-router-dom';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 interface AuthProviderProps {

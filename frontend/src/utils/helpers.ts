@@ -23,11 +23,11 @@ export const truncateText = (text: string, maxLength: number): string => {
   return `${text.slice(0, maxLength)}...`;
 };
 
-export const debounce = <T extends (...args: unknown[]) => void>(
+export const debounce = <T extends (...args: string[]) => void>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout | null = null;
+  let timeout: ReturnType<typeof setTimeout> | null = null;
 
   return (...args: Parameters<T>) => {
     if (timeout) clearTimeout(timeout);
